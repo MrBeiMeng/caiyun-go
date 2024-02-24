@@ -1,0 +1,10 @@
+# caiyun-api token ,you can get it here : https://platform.caiyunapp.com/application/manage
+Token: your_token
+
+Mysql:
+  Host: ---
+  Port: ---
+  User: ---
+  Password: ---
+  Database: ---- # 运行test_migrate 将自动创建表
+

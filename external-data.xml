@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <object-set>
+    <schema path="monitor_weather2">
+      <view name="newest_daily_precipitation" query="SELECT *&#xa;FROM monitor_weather2.precipitations AS a&#xa;         INNER JOIN (SELECT date(date) AS date_only, MAX(created_at) AS max_create&#xa;                     FROM monitor_weather2.precipitations&#xa;                     GROUP BY date_only) AS b&#xa;                    ON a.date = b.date_only AND a.created_at = b.max_create&#xa;where a.update_frequency = &apos;daily&apos;;"/>
+    </schema>
+  </object-set>
+</data>
